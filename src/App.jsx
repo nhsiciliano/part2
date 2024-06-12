@@ -73,6 +73,7 @@ const App = () => {
         .catch(error => {
           setNotificationMessage(`Something went wrong. Try again in a few minutes`);
           setNotificationType('error');
+          console.log(error.response.data.error);
           setTimeout(() => {
             setNotificationMessage(null);
           }, 5000);
